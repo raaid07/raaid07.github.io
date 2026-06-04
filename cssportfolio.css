@@ -1,0 +1,277 @@
+* { 
+  margin: 0; padding: 0; box-sizing: border-box; 
+}
+/* Corps de la page de base menu portfoli*/
+body { background: #141414;
+  color: #e5e5e5;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  padding-top: 70px;
+}
+/*Tout en lien avec la barre de nvgation du portfoolio*/
+.barrenav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 70px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  z-index: 100;
+}
+.logo { 
+  font-family: 'Bebas Neue', sans-serif; 
+  font-size: 2rem; 
+  color: #E50914; 
+  text-decoration: none; 
+}
+.liennav { 
+  display: flex; 
+  gap: 20px; 
+  list-style: none; 
+}
+.liennav a { 
+  color: #b3b3b3; 
+  text-decoration: none; 
+  font-size: 0.85rem; 
+}
+.liennav a:hover { 
+  color: #fff;}
+.avatar {
+  background: #E50914; padding: 5px 10px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; 
+}
+/* Partie principal avc toutes les infos sur le portfdolio.*/
+.principal { height: 80vh; display: flex; align-items: center; padding: 0 4%; gap: 40px; background: linear-gradient(to right, rgba(20,20,20,1) 40%, transparent), radial-gradient(circle, #2a0808 0%, #141414 100%);
+}
+
+.contenu-prin { 
+  flex: 1; 
+}
+
+.photo-prin { flex: 0 0 300px; height: 400px; overflow: hidden; margin-right: 10%;
+}
+
+.photo-prin img { 
+  width: 100%; height: 100%; object-fit: cover; object-position: top; 
+}
+
+.badge { 
+  background: #E50914; 
+  font-size: 0.7rem; 
+  padding: 4px 8px; 
+  font-weight: 600; 
+  display: inline-block; 
+}
+.titre-prin { 
+  font-family: 'Bebas Neue', sans-serif; 
+  font-size: 5rem; 
+  line-height: 0.9; 
+  margin: 15px 0; 
+}
+.titre-prin span { 
+  color: #E50914; 
+}
+.infos-prin { 
+  display: flex; 
+  gap: 15px; 
+  font-size: 0.9rem; 
+  color: #a3a3a3; 
+  margin-bottom: 15px; 
+}
+.infos-prin .match { 
+  color: #46d369; font-weight: bold; 
+}
+.infos-prin .maturité { 
+  border: 1px solid #a3a3a3; padding: 0 5px; font-size: 0.75rem; 
+}
+.desc-prin { 
+  max-width: 500px; color: #d4d4d4; margin-bottom: 25px; 
+}
+.btn-prin { 
+  display: flex; gap: 10px; 
+}
+/* Css pour les boutoons portfolio*/
+.btn-proj, .btn-cont { padding: 10px 24px; border-radius: 4px; font-weight: bold; text-decoration: none; display: inline-block; transition: 0.2s;
+}
+.btn-proj { 
+  background: #fff; color: #000; 
+}
+.btn-proj:hover { 
+  background: rgba(255,255,255,0.7); 
+}
+.btn-cont { 
+  background: rgba(109,109,110,0.7); color: #fff; 
+}
+.btn-cont:hover { 
+  background: rgba(109,109,110,0.4); 
+}
+.btn-red { 
+  background: #E50914; color: #fff; padding: 10px 24px; border-radius: 4px; font-weight: bold; text-decoration: none; display: inline-block; 
+}
+/* Partie sur les projets avecc les informatiopns*/
+.section-row { 
+  padding: 20px 4%; 
+}
+.titre-projets { 
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 1px; margin-bottom: 15px; 
+}
+
+.contenu-projets { 
+  display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; 
+}
+.contenu-projets::-webkit-scrollbar { 
+  display: none; 
+}
+/* lacarte elle meme des projets du portfolio*/
+.carte {
+  flex: 0 0 240px; height: 140px; border-radius: 4px; overflow: hidden; position: relative; cursor: pointer; transition: transform 0.3s; text-decoration: none; color: inherit;
+}
+.carte:hover { 
+  transform: scale(1.05); z-index: 2; 
+}
+.titre-proj { 
+  width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: rgba(255,255,255,0.15); 
+}
+.overlay-proj { 
+  position: absolute; inset: 0; background: rgba(0,0,0,0.85); display: flex; flex-direction: column; justify-content: flex-end; padding: 15px; opacity: 0; transition: opacity 0.2s; 
+}
+.carte:hover .overlay-proj { 
+  opacity: 1; 
+}
+.nom-proj { 
+  font-weight: bold; font-size: 0.9rem; 
+}
+.tags-proj { 
+  font-size: 0.75rem; color: #b3b3b3; margin-top: 5px; }
+.proj1 { background: linear-gradient(135deg, #1f0303, #4a0606); 
+}
+.proj2 { 
+  background: linear-gradient(135deg, #020c1b, #082449); 
+}
+.proj3 { 
+  background: linear-gradient(135deg, #041408, #0b3314); 
+}
+.proj4 { 
+  background: linear-gradient(135deg, #110724, #2d115c); 
+}
+
+/* la partie à propos avbec les images et la descriptionds*/
+.àpropos { display: flex; align-items: stretch; background: #181818; min-height: 380px; }
+
+.img-àpropos { flex: 0 0 26%; }
+.img-àpropos img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.txt-àpropos { flex: 1; padding: 60px 5%; display: flex; flex-direction: column; justify-content: center; }
+
+.grostxt-àpropos { color: #E50914; font-weight: bold; font-size: 0.8rem; letter-spacing: 1px; }
+.txt-àpropos h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; margin: 10px 0; }
+.txt-àpropos p { color: #a3a3a3; line-height: 1.6; }
+.stats-àpropos { display: flex; gap: 40px; margin-top: 20px; }
+.stats-àpropos strong { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: #E50914; display: block; }
+.stats-àpropos p { font-size: 0.8rem; }
+/* La partier compétences avec toutes mes compétences du portfolio*/
+.ts-comp { display: flex; flex-wrap: wrap; gap: 10px; }
+.ts-comp span { background: #262626; padding: 8px 16px; border-radius: 4px; font-size: 0.85rem; border: 1px solid #333; }
+/* La partie contact pour me contacter avec git mail linkedin*/
+.contact { padding: 60px 4%; text-align: center; }
+.contact h2 { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; margin: 10px 0; }
+.contact p { color: #a3a3a3; margin-bottom: 20px; }
+/*les liens pour le contatc*/
+.lien-contact { display: flex; justify-content: center; align-items: center; gap: 20px; }
+.style-link { color: #a3a3a3; text-decoration: none; font-size: 0.9rem; }
+.style-link:hover { color: #fff; text-decoration: underline; }
+/* le footyer avec quelquers informaztions*/
+footer { padding: 30px 4%; display: flex; justify-content: space-between; font-size: 0.8rem; color: #555; border-top: 1px solid #222; }
+/* Début de la aprtie pour les pages projets donc chaque page à pratiquement la même structure donc meilleur de les relier à ce css*/
+/* Css pour le bouton arrière pour retournezr à la page d'"accueil en haut de la page des projets portfolio*/
+.btn-arriere { display: inline-block; margin: 24px 4% 0; color: #b3b3b3; text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+.btn-arriere:hover { color: #fff; }
+/* Partie en haut à gauche des pages projets où c'et écrit le nom la date et les compétences et une mini despcription*/
+.main-proj {
+  min-height: 55vh;
+  display: flex; align-items: flex-end;
+  padding: 60px 4% 50px;
+  position: relative; overflow: hidden;
+}
+.bg-main-proj { position: absolute; inset: 0; opacity: 0.25; }
+.main-proj::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(20,20,20,0.7) 0%, transparent 35%), linear-gradient(to top, #141414 0%, transparent 55%); z-index: 1;
+}
+.contenu-main-proj { position: relative; z-index: 2; }
+.contenu-main-proj h1 { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; line-height: 0.9; margin: 12px 0; }
+
+.infos-main-proj { display: flex; gap: 8px; margin: 14px 0 18px; flex-wrap: wrap; }
+.infos-main-proj span { background: rgba(38,38,38,0.8); border: 1px solid #3a3a3a; padding: 5px 14px; border-radius: 2px; font-size: 0.78rem; color: #b3b3b3; }
+.infos-main-proj .tag-red { background: #E50914; border-color: #E50914; color: #fff; font-weight: 600; }
+/* le reste de la partiue princiapler de la page*/
+.main-structure { display: flex; padding: 0 4% 60px; align-items: flex-start; }
+/* Partie avec le texte*/
+.corps-main { flex: 1; padding: 40px 60px 0 0; min-width: 0; }
+.corps-main h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 1.5px; color: #fff; margin: 40px 0 14px; padding-left: 14px; border-left: 3px solid #E50914; }
+.corps-main h2:first-child { margin-top: 0; }
+.corps-main p { color: #a3a3a3; line-height: 1.8; margin-bottom: 10px; font-size: 0.92rem; }
+.corps-main ul { list-style: none; padding: 0; }
+.corps-main ul li { color: #a3a3a3; font-size: 0.92rem; line-height: 1.8; padding-left: 16px; position: relative; }
+.corps-main ul li::before { content: '—'; position: absolute; left: 0; color: #E50914; }
+.divise-main { height: 1px; background: #222; margin: 10px 0; }
+/* la sidebar qui montre des infos mais aussi les compeetences et des barre de competences*/
+.sidebar-main { flex: 0 0 260px; padding-top: 40px; position: sticky; top: 90px; }
+.sidebar-carte { background: #1c1c1c; border: 1px solid #2a2a2a; border-radius: 4px; padding: 24px; margin-bottom: 16px; }
+.sidebar-carte h3 { font-family: 'Bebas Neue', sans-serif; font-size: 0.9rem; letter-spacing: 1.5px; color: #E50914; margin-bottom: 14px; }
+.sidebar-info { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #2a2a2a; font-size: 0.82rem; }
+.sidebar-info:last-child { border-bottom: none; }
+.sidebar-info .label { color: #555; }
+.sidebar-info .valeur { color: #d4d4d4; font-weight: 500; }
+.barre-comp { margin-bottom: 12px; }
+.barre-comp-label { display: flex; justify-content: space-between; font-size: 0.8rem; color: #b3b3b3; margin-bottom: 5px; }
+.barre-comp-track { height: 3px; background: #2a2a2a; border-radius: 2px; overflow: hidden; }
+.barre-comp-fill { height: 100%; background: #E50914; border-radius: 2px; }
+/*les liens dans la sidebarss*/
+.lien-sidebar { display: block; text-align: center; padding: 10px; background: #262626; border: 1px solid #3a3a3a; border-radius: 4px; color: #d4d4d4; text-decoration: none; font-size: 0.82rem; font-weight: 600; transition: background 0.2s; margin-top: 6px; }
+.lien-sidebar:hover { background: #333; color: #fff; }
+/* le responsive pour les mobiles pour le portfolio */
+@media (max-width: 480px) {
+ 
+  /* partier princiaplme du portfolio*/
+  .titre-prin { 
+    font-size: 2.8rem; 
+  }
+  .photo-prin { 
+    width: 85%; height: 280px;
+  }
+  .badge { 
+    font-size: 0.65rem; 
+  }
+ 
+  /* lers p^rojets et experiences du portfiolio pour les mobiles responsive*/
+  .carte { 
+    flex: 0 0 150px; height: 100px; 
+  }
+  .titre-proj { 
+    font-size: 1.3rem; 
+  }
+ 
+  /*la partie à propos pour le responsive*/
+  .img-àpropos { 
+    height: 220px; 
+  }
+  .txt-àpropos h2 { 
+    font-size: 2rem; 
+  }
+  .stats-àpropos { 
+    gap: 20px; 
+  }
+ 
+  /* responssive pour les pages des projets et expéreinces protfiloi*/
+  .project-hero-content h1 { 
+    font-size: 2.4rem; 
+  }
+  .project-hero { 
+    min-height: 40vh; padding: 40px 4% 35px;
+   }
+ 
+  /* le retponsive du portfoiool footer*/
+  footer { 
+    flex-direction: column; gap: 6px; text-align: center; 
+  }
+}
